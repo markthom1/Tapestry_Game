@@ -103,10 +103,41 @@ var webPages = (function() {
               $('.container').append(`<div class="hold-button"><button id="back"><a href="index.html">Back</button></a></div>`);
             });
 
-                                                //Allows for one to start and Pause the game desired.
-            $('body').on("keypress", function(e){
-              if (!gameStarted) {
-                if (e.keyCode === 32) {
+
+            if ($(window).width() > 414) {    //Allows for one to start and Pause the game desired.
+              $('body').on("keypress", function(e){
+                if (!gameStarted) {
+                  if (e.keyCode === 32) {
+                    backgroundMusic.pause();
+                    setInterval(function(){iCheckTime++},1)
+                    setTimeout(function() {setInterval(function() {gamePlay.showBallAll()}, songInt);}, songTO);
+                    setTimeout(function(){audioElement.play(); console.log('song', iCheckTime);},100);
+                    $('.backshade').css("opacity","0.5");
+                    gameStarted = true;
+                    $('.play-guide').fadeOut('medium');
+                  };
+                } else {
+                  if (e.keyCode === 32) {
+                    if (allowPlay) {
+                      allowPlay = false;
+                      $('.backshade').css("opacity","0.0");
+                      $('.play-guide').text('Paused.')
+                      $('.play-guide').fadeIn('medium');
+                      audioElement.pause();
+                      unpauseSong = true;
+                      $('.contains-ball').css("animation-play-state","paused");
+                    } else {
+                      allowPlay = true;
+                      $('.backshade').css("opacity","0.5");
+                      $('.play-guide').fadeOut('medium');
+                      $('.contains-ball').css("animation-play-state","running");
+                    }
+                  };
+                }
+              });
+            } else {
+              $('body').on("tap", function(){
+                if (!gameStarted) {
                   backgroundMusic.pause();
                   setInterval(function(){iCheckTime++},1)
                   setTimeout(function() {setInterval(function() {gamePlay.showBallAll()}, songInt);}, songTO);
@@ -114,26 +145,10 @@ var webPages = (function() {
                   $('.backshade').css("opacity","0.5");
                   gameStarted = true;
                   $('.play-guide').fadeOut('medium');
-                };
-              } else {
-                if (e.keyCode === 32) {
-                  if (allowPlay) {
-                    allowPlay = false;
-                    $('.backshade').css("opacity","0.0");
-                    $('.play-guide').text('Paused.')
-                    $('.play-guide').fadeIn('medium');
-                    audioElement.pause();
-                    unpauseSong = true;
-                    $('.contains-ball').css("animation-play-state","paused");
-                  } else {
-                    allowPlay = true;
-                    $('.backshade').css("opacity","0.5");
-                    $('.play-guide').fadeOut('medium');
-                    $('.contains-ball').css("animation-play-state","running");
-                  }
-                };
-              }
-            });
+                }
+              });
+            }
+
           });
           webPages.initializeLinks(); //Needed so that links will work on newly loaded page
 
