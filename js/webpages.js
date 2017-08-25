@@ -57,7 +57,7 @@ var webPages = (function() {
             `);
           $('.game-board').hide();
           $('.score').hide();
-          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/unit-1-project/index.html">Back</button></a></div>`)
+          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/Tapestry_Game/index.html">Back</button></a></div>`)
           if ($('nav').length === 0){     //Adds navigations bar on top if one is not already present.
             $('header').append(`
               <nav>
@@ -100,7 +100,7 @@ var webPages = (function() {
               $('.score').slideToggle();
               $('.navi').slideToggle();
               $('#back').fadeOut().remove();
-              $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/unit-1-project/index.html">Back</button></a></div>`);
+              $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/Tapestry_Game/index.html">Back</button></a></div>`);
             });
 
                                                 //Allows for one to start and Pause the game desired.
@@ -151,7 +151,7 @@ var webPages = (function() {
               </div>
             </div>
             `);
-          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/unit-1-project/index.html">Back</button></a></div>`);
+          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/Tapestry_Game/index.html">Back</button></a></div>`);
           if ($('nav').length === 0){     //Adds navigations bar on top if one is not already present (it's the same for the other pages).
             $('header').append(`
               <nav>
@@ -184,7 +184,7 @@ var webPages = (function() {
               </div>
             </div>
             `);
-          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/unit-1-project/index.html">Back</button></a></div>`)
+          $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/Tapestry_Game/index.html">Back</button></a></div>`)
           if ($('nav').length === 0){
             $('header').append(`
               <nav>
@@ -224,7 +224,7 @@ var webPages = (function() {
             </div>
           </div>
           `);
-        $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/unit-1-project/index.html">Back</button></a></div>`)
+        $('.container').append(`<div class="hold-button"><button id="back"><a href="/Users/akv083/7week/Tapestry_Game/index.html">Back</button></a></div>`)
 
         for (score in localStorage){    //Gets high scores from local storage and loads it into page.
           var line = $('<p>')

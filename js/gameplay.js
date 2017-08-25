@@ -66,7 +66,7 @@ var gamePlay = (function(){
 
             totalPoints = 0;        //Reset points.
 
-            window.location.href = "/Users/akv083/7week/unit-1-project/index.html";   //Reset game.
+            window.location.href = "/Users/akv083/7week/Tapestry_Game/index.html";   //Reset game.
           },8000)
 
         }
