@@ -6,8 +6,8 @@ if (!localStorage) {
 
 
 //Setting links to various sound effects
-blast.setAttribute('src', `/Users/akv083/7week/Tapestry_Game/music/151022__bubaproducer__laser-shot-silenced.wav`);
-miss.setAttribute('src', `/Users/akv083/7week/Tapestry_Game/music/167328__willy-ineedthatapp-com__droplet-bad.mp3`);
+blast.setAttribute('src', `music/151022__bubaproducer__laser-shot-silenced.wav`);
+miss.setAttribute('src', `music/167328__willy-ineedthatapp-com__droplet-bad.mp3`);
 
 //This loops through each object in the lanes array(in variables.js) and adds the following properties and methods.
 lanes.forEach(function(lane) {
@@ -100,7 +100,7 @@ if ($(window).width() > 414){
 
 $(function(){
 
-  backgroundMusic.setAttribute('src', `/Users/akv083/7week/Tapestry_Game/music/bensound-moose.mp3`);
+  backgroundMusic.setAttribute('src', `music/bensound-moose.mp3`);
   backgroundMusic.play();
   backgroundMusic.volume = 0.5;
   backgroundMusic.addEventListener('ended', function() {

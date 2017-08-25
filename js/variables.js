@@ -11,7 +11,7 @@ var songs = [
       12,3,0,1,23,23,0,13,13,2,0,1,2,3,2,3,0,2,0,0,13,1,2,23,23,0,13,23,13,2,2, // example: 2 - orb in only second lane.
       23,0,1,0],
     interval: 481.5, // How often orb(s) is(are) released.
-    src: '/Users/akv083/7week/Tapestry_Game/music/Ariana Grande - One Last Time Lyrics.mp3',
+    src: 'music/Ariana Grande - One Last Time Lyrics.mp3',
     timeout: 7202
   },
   {
@@ -26,7 +26,7 @@ var songs = [
       3,0,3,3,1,0,2,1,3,0,2,0,13,0,23,0,1,0,23,0,1,0,23,0,1,0,2,2,3,3,1,0,23,0,12,0,
       2,0,1,0,3,2,12,0,2,0],
     interval: 400,
-    src: '/Users/akv083/7week/Tapestry_Game/music/Julian_Calor_-_Lose_Your_Mind.mp3',
+    src: 'music/Julian_Calor_-_Lose_Your_Mind.mp3',
     timeout: 0,
   }
 ];
@@ -50,5 +50,5 @@ var songInt = 0;
 var songTO = 0;
 
 var linkSound = document.createElement('audio');
-linkSound.setAttribute('src', `/Users/akv083/7week/Tapestry_Game/music/290507__littlerobotsoundfactory__mouth-47.wav`);
+linkSound.setAttribute('src', `music/290507__littlerobotsoundfactory__mouth-47.wav`);
 var backgroundMusic = document.createElement('audio');
