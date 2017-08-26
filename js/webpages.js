@@ -136,7 +136,7 @@ var webPages = (function() {
                 }
               });
             } else {
-              $('body').on("tap", function(){
+              $('.game-board').on("click", function(){
                 if (!gameStarted) {
                   backgroundMusic.pause();
                   setInterval(function(){iCheckTime++},1)
