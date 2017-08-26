@@ -82,15 +82,16 @@ if ($(window).width() > 414){
   });
 } else {
   console.log('mobile');
-  $('.cpath1').on("click", function(e){
+  $('body').on("click", function(e){
     e.preventDefault();
+    console.log('working');
     lanes[0].button = true;
   });
-  $('.cpath2').on("click", function(e){
+  $('body').on("click", function(e){
     e.preventDefault();
     lanes[1].button = true;
   });
-  $('.cpath3').on("click", function(e){
+  $('body').on("click", function(e){
     e.preventDefault();
     lanes[2].button = true;
   });
