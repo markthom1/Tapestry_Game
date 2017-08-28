@@ -1,3 +1,6 @@
+Public GitHub (https://markthom1.github.io/Tapestry_Game/);
+
+
 1. Technologies used: # H1
 
 The main technologies used for this project was html, css and javascript (including use of jQuery). The local storage is also used for high scores. 
